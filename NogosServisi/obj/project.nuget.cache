@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hvXXi6lFK0jItjJsN7B9SyoGjJhjQr53fWUKhTEVHN/NP8hTl36/2qW8lcbhxiJj+24/PWGPlg8rI7mRtuCklg==",
+  "dgSpecHash": "J+QQL67LCbLJQqD0xQ7g272vIZxAfapfGqQa/CMJR1yY3q2G7/ZvMYudqFQeywmFJwCnUx705gOICzKmrbZy/g==",
   "success": true,
-  "projectFilePath": "/Users/rokobarbic/Development/nogos-servisi/NogosServisi/NogosServisi.csproj",
+  "projectFilePath": "/Users/rokobarbic/nogos-servisi/NogosServisi/NogosServisi.csproj",
   "expectedPackageFiles": [
     "/Users/rokobarbic/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/rokobarbic/.nuget/packages/microsoft.aspnetcore.authentication.abstractions/2.3.0/microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",

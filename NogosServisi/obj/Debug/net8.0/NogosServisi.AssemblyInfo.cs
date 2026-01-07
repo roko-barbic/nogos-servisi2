@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NogosServisi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21c4a59fa400820b8a4543ea12928fc3632c2de5")]
 [assembly: System.Reflection.AssemblyProductAttribute("NogosServisi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NogosServisi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

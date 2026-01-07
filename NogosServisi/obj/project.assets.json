@@ -3917,11 +3917,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/rokobarbic/Development/nogos-servisi/NogosServisi/NogosServisi.csproj",
+      "projectUniqueName": "/Users/rokobarbic/nogos-servisi/NogosServisi/NogosServisi.csproj",
       "projectName": "NogosServisi",
-      "projectPath": "/Users/rokobarbic/Development/nogos-servisi/NogosServisi/NogosServisi.csproj",
+      "projectPath": "/Users/rokobarbic/nogos-servisi/NogosServisi/NogosServisi.csproj",
       "packagesPath": "/Users/rokobarbic/.nuget/packages/",
-      "outputPath": "/Users/rokobarbic/Development/nogos-servisi/NogosServisi/obj/",
+      "outputPath": "/Users/rokobarbic/nogos-servisi/NogosServisi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/rokobarbic/.nuget/NuGet/NuGet.Config"
