@@ -22,7 +22,7 @@ var app = builder.Build();
 
 //Default database seeding
 
-using (var scope = app.Services.CreateScope())
+/*using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     DataContext context = services.GetRequiredService<DataContext>();
@@ -32,7 +32,7 @@ using (var scope = app.Services.CreateScope())
 
     await context.DisposeAsync();
 }
-
+*/
 //messaging
 
 app.MapHub<ScoreHub>("/scoreHub");
