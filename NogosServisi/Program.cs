@@ -22,7 +22,7 @@ var app = builder.Build();
 
 //Default database seeding
 
-/*using (var scope = app.Services.CreateScope())
+using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     DataContext context = services.GetRequiredService<DataContext>();
@@ -31,7 +31,7 @@ var app = builder.Build();
     await DefaultSeeds.SeedAsync(context);
 
     await context.DisposeAsync();
-}*/
+}
 
 //messaging
 
