@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "xifWJ3bPK3f9kbKMbakWVYEvq0P2fp2S02L45f6CC9Q=",
+  "Source": "NogosServisi",
+  "BasePath": "_content/NogosServisi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "NogosServisi/wwwroot",
+      "Source": "NogosServisi",
+      "ContentRoot": "/Users/rokobarbic/Development/nogos-servisi/NogosServisi/wwwroot/",
+      "BasePath": "_content/NogosServisi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/rokobarbic/Development/nogos-servisi/NogosServisi/wwwroot/Overlays/ScoreBoard.html",
+      "SourceId": "NogosServisi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/rokobarbic/Development/nogos-servisi/NogosServisi/wwwroot/",
+      "BasePath": "_content/NogosServisi",
+      "RelativePath": "Overlays/ScoreBoard.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Overlays/ScoreBoard.html"
+    }
+  ]
+}

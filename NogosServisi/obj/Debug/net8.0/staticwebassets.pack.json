@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/rokobarbic/Development/nogos-servisi/NogosServisi/wwwroot/Overlays/ScoreBoard.html",
+      "PackagePath": "staticwebassets/Overlays/ScoreBoard.html"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.NogosServisi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.NogosServisi.props",
+      "PackagePath": "build\\NogosServisi.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.NogosServisi.props",
+      "PackagePath": "buildMultiTargeting\\NogosServisi.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.NogosServisi.props",
+      "PackagePath": "buildTransitive\\NogosServisi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

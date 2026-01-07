@@ -1,0 +1,6 @@
+@NogosServisi_HostAddress = http://localhost:5244
+
+GET {{NogosServisi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

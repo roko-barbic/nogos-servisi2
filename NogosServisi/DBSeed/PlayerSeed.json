@@ -1,0 +1,110 @@
+[
+  {
+    "FirstName": "Mateo Jovic",
+    "LastName": "Mata",
+    "DateOfBirth": "1986-10-27"
+  },
+  {
+    "FirstName": "Damir Majer",
+    "LastName": "Jerma",
+    "DateOfBirth": "1988-03-30"
+  },
+  {
+    "FirstName": "Fran Strasser",
+    "LastName": "Franjo",
+    "DateOfBirth": "1999-07-21"
+  },
+  {
+    "FirstName": "Luka Nujic",
+    "LastName": "Nuja",
+    "DateOfBirth": "1992-04-15"
+  },
+  {
+    "FirstName": "Ivan Sabolski",
+    "LastName": "Isnjak",
+    "DateOfBirth": "1991-12-10"
+  },
+  {
+    "FirstName": "Damir Adric",
+    "LastName": "Adrinjo",
+    "DateOfBirth": "1996-03-11"
+  },
+  {
+    "FirstName": "Ivan Mor",
+    "LastName": "Morinjo",
+    "DateOfBirth": "1991-11-29"
+  },
+  {
+    "FirstName": "Mislav Derd",
+    "LastName": "Mico",
+    "DateOfBirth": "2001-02-19"
+  },
+  {
+    "FirstName": "Juraj Marincic",
+    "LastName": "Palmer",
+    "DateOfBirth": "1994-11-30"
+  },
+  {
+    "FirstName": "Roko Barbic",
+    "LastName": "Rokster",
+    "DateOfBirth": "1988-08-17"
+  },
+  {
+    "FirstName": "Csaba Erdes",
+    "LastName": "Csaboslaj",
+    "DateOfBirth": "1993-04-26"
+  },
+  {
+    "FirstName": "Kiki",
+    "LastName": "Kiki",
+    "DateOfBirth": "1992-03-07"
+  },
+  {
+    "FirstName": "Leon Marsic",
+    "LastName": "Marsa",
+    "DateOfBirth": "1999-06-07"
+  },
+  {
+    "FirstName": "Leon Ceferin",
+    "LastName": "Cefla",
+    "DateOfBirth": "1999-06-07"
+  },
+  {
+    "FirstName": "Tomislav Juros",
+    "LastName": "Marsa",
+    "DateOfBirth": "1999-06-07"
+  },
+  {
+    "FirstName": "Svab",
+    "LastName": "Svab",
+    "DateOfBirth": "1999-06-07"
+  },
+  {
+    "FirstName": "Hrca",
+    "LastName": "Hrca",
+    "DateOfBirth": "1999-06-07"
+  },
+  {
+    "FirstName": "Saraf",
+    "LastName": "Saraf",
+    "DateOfBirth": "1999-06-07"
+  },{
+    "FirstName": "Cevo",
+    "LastName": "Cevo",
+    "DateOfBirth": "1999-06-07"
+  },{
+    "FirstName": "Enio",
+    "LastName": "Enio",
+    "DateOfBirth": "1999-06-07"
+  },
+  {
+    "FirstName": "Ivano",
+    "LastName": "Ivano",
+    "DateOfBirth": "1999-06-07"
+  },
+  {
+    "FirstName": "Pero",
+    "LastName": "Pero",
+    "DateOfBirth": "1999-06-07"
+  }
+]

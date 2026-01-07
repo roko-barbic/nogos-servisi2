@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800&display=swap');
+
+        body {
+            background-color: transparent;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .scoreboard {
+            display: flex;
+            align-items: center;
+            background: #3d195b; 
+            color: white;
+            height: 44px;
+            border-radius: 2px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
+
+        /* The Team sections with their specific accent lines */
+        .team {
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 1rem;
+            padding: 0 18px;
+            font-weight: 700;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .sve-side {
+            border-left: 5px solid #1a1a1a; /* Black Accent Line */
+        }
+
+        .markeri-side {
+            border-left: 5px solid #ff8c00; /* Orange Accent Line */
+        }
+
+        .score-container {
+            background-color: #ffffff;
+            color: #3d195b;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            gap: 8px;
+        }
+
+        .timer-box {
+            padding: 0 15px;
+            font-size: 1rem;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            opacity: 0.9;
+        }
+
+        /* Scorer Panel */
+        .goal-info-panel {
+            background: rgba(42, 10, 68, 0.98);
+            color: white;
+            min-width: 140px;
+            margin-left: 5px; /* Aligns panel with the first accent line */
+            padding: 6px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            border-radius: 0 0 2px 2px;
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: all 0.4s ease-in-out;
+            z-index: 5;
+            visibility: hidden;
+        }
+
+        .goal-info-panel.show {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scorer-text { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; }
+        .assist-text { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; opacity: 0.7; }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="scoreboard">
+            <div class="team sve-side">Sve</div>
+            
+            <div class="score-container">
+                <span id="score1">0</span>
+                <span style="opacity: 0.2; font-size: 1rem;">-</span>
+                <span id="score2">0</span>
+            </div>
+
+            <div class="team markeri-side">Markeri</div>
+            
+            <div class="timer-box" id="utc-clock">00:00</div>
+        </div>
+
+        <div id="goal-panel" class="goal-info-panel">
+            <div id="scorer-name" class="scorer-text"></div>
+            <div id="assist-info" class="assist-text"></div>
+        </div>
+    </div>
+
+    <script>
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("http://localhost:5244/scoreHub")
+            .withAutomaticReconnect()
+            .build();
+
+        let hideTimeout;
+
+        connection.on("ScoreUpdated", (game) => {
+            document.getElementById("score1").innerText = game.score1;
+            document.getElementById("score2").innerText = game.score2;
+
+            const panel = document.getElementById("goal-panel");
+            const scorerEl = document.getElementById("scorer-name");
+            const assistEl = document.getElementById("assist-info");
+
+            if (game.scorer && game.scorer.trim() !== "") {
+                scorerEl.innerText = game.scorer;
+                assistEl.innerText = (game.assist && game.assist.trim() !== "") ? "Assist: " + game.assist : "";
+
+                panel.classList.add("show");
+                clearTimeout(hideTimeout);
+                hideTimeout = setTimeout(() => {
+                    panel.classList.remove("show");
+                }, 10000);
+            }
+        });
+
+        function updateClock() {
+            const now = new Date();
+            let hours = (now.getUTCHours() + 1) % 24;
+            let minutes = now.getUTCMinutes();
+            const hStr = hours < 10 ? '0' + hours : hours;
+            const mStr = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById('utc-clock').textContent = hStr + ':' + mStr;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+        connection.start().catch(err => console.error(err));
+    </script>
+</body>
+</html>
