@@ -71,12 +71,16 @@ public class GameController : ControllerBase
     [HttpPost("addEvent")]
     public async Task<IActionResult> AddNewEvent(AddNewEventDTO addNewEventDTO)
     {
-        Events newEvent = new Events();
         var game =  await _context.Games.Include(b => b.Events).Include(c => c.homePlayers).Include(c => c.awayPlayers).FirstOrDefaultAsync(a => a.Id == addNewEventDTO.GameId);
-        if(game == null)
-            return BadRequest();
-        newEvent.Player_One = await _context.Players.FirstOrDefaultAsync(a => a.Id == addNewEventDTO.Player_One);
-        newEvent.Player_Two = await _context.Players.FirstOrDefaultAsync(a => a.Id == addNewEventDTO.Player_Two);
+        if(game == null) return BadRequest("Game not found");
+
+        Events newEvent = new Events {
+            Player_OneId = addNewEventDTO.Player_One, 
+            Player_TwoId = addNewEventDTO.Player_Two, 
+            Type = addNewEventDTO.Type
+        };
+        // newEvent.Player_One = await _context.Players.FirstOrDefaultAsync(a => a.Id == addNewEventDTO.Player_One);
+        // newEvent.Player_Two = await _context.Players.FirstOrDefaultAsync(a => a.Id == addNewEventDTO.Player_Two);
         newEvent.Type = addNewEventDTO.Type;
         var eventList = game.Events.ToList();
         eventList.Add(newEvent);  
