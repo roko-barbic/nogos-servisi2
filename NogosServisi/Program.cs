@@ -19,6 +19,7 @@ builder.Services.AddSignalR();
 
 var app = builder.Build();
 
+app.UseStaticFiles();
 
 //Default database seeding
 
@@ -36,8 +37,6 @@ var app = builder.Build();
 //messaging
 
 app.MapHub<ScoreHub>("/scoreHub");
-app.UseStaticFiles();
-
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
