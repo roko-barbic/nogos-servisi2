@@ -21,6 +21,9 @@ var app = builder.Build();
 
 app.UseStaticFiles();
 
+app.UseRouting();
+
+app.UseCors("SignalRCors");
 //Default database seeding
 
 /*using (var scope = app.Services.CreateScope())
@@ -36,8 +39,6 @@ app.UseStaticFiles();
 */
 //messaging
 
-app.MapHub<ScoreHub>("/scoreHub");
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -48,6 +49,7 @@ if (app.Environment.IsDevelopment())
 //app.UseHttpsRedirection();
 
 app.MapControllers();
+app.MapHub<ScoreHub>("/scoreHub");
 
 
 app.Run();
