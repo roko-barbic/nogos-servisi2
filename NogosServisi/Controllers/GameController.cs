@@ -7,6 +7,7 @@ using NogosServisi.Data;
 using NogosServisi.DTO;
 using NogosServisi.Entities;
 using Microsoft.AspNetCore.SignalR;
+using NogosServisi.Mappers;
 
 
 
@@ -99,4 +100,32 @@ public class GameController : ControllerBase
 
         return Ok(game);
     }
+
+    [HttpGet("fetchGame/{id}")]
+    public async Task<IActionResult> FetchGame(int id)
+    {
+        var game =  await _context.Games.Include(b => b.Events)
+                                        .Include(c => c.homePlayers)
+                                        .Include(c => c.awayPlayers)
+                                        .FirstOrDefaultAsync(a => a.Id == id);
+
+        if(game == null) return BadRequest();
+
+        var homePlayerDtos = game.homePlayers.Select(p => p.ToDto())
+                                             .ToList();
+
+        var awayPlayerDtos = game.awayPlayers.Select(p => p.ToDto())
+                                             .ToList();
+
+        GameStatusDTO gameStatusDTO = new GameStatusDTO
+        {
+            HomePlayers = homePlayerDtos,
+            AwayPlayers = awayPlayerDtos,
+            HomeScore = game.Club_Home_Score,
+            AwayScore = game.Club_Away_Score
+        };
+
+        return Ok(gameStatusDTO);
+    }
+
 }
