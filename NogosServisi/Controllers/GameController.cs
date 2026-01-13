@@ -119,6 +119,7 @@ public class GameController : ControllerBase
 
         GameStatusDTO gameStatusDTO = new GameStatusDTO
         {
+            GameId = game.Id,
             HomePlayers = homePlayerDtos,
             AwayPlayers = awayPlayerDtos,
             HomeScore = game.Club_Home_Score,
