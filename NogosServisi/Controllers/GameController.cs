@@ -76,8 +76,8 @@ public class GameController : ControllerBase
         if(game == null) return BadRequest("Game not found");
 
         Events newEvent = new Events {
-            Player_OneId = addNewEventDTO.Player_One, 
-            Player_TwoId = addNewEventDTO.Player_Two, 
+            Player_OneId = addNewEventDTO.PlayerOne, 
+            Player_TwoId = addNewEventDTO.PlayerTwo, 
             Type = addNewEventDTO.Type
         };
         // newEvent.Player_One = await _context.Players.FirstOrDefaultAsync(a => a.Id == addNewEventDTO.Player_One);
