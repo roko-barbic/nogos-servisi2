@@ -71,7 +71,7 @@
   },
   {
     "FirstName": "Tomislav Juros",
-    "LastName": "Marsa",
+    "LastName": "Tomo",
     "DateOfBirth": "1999-06-07"
   },
   {
@@ -90,7 +90,7 @@
     "DateOfBirth": "1999-06-07"
   },
   {
-    "FirstName": "Pero",
+    "FirstName": "Robert",
     "LastName": "Brata",
     "DateOfBirth": "1999-06-07"
   },
@@ -111,6 +111,11 @@
   {
     "FirstName": "Čvek",
     "LastName": "Čvek",
+    "DateOfBirth": "1999-06-07"
+  },
+  {
+    "FirstName": "Toni",
+    "LastName": "Toni",
     "DateOfBirth": "1999-06-07"
   }
 ]

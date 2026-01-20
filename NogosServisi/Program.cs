@@ -26,7 +26,7 @@ app.UseRouting();
 app.UseCors("SignalRCors");
 //Default database seeding
 
-/*using (var scope = app.Services.CreateScope())
+using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     DataContext context = services.GetRequiredService<DataContext>();
@@ -36,7 +36,7 @@ app.UseCors("SignalRCors");
 
     await context.DisposeAsync();
 }
-*/
+
 //messaging
 
 // Configure the HTTP request pipeline.
