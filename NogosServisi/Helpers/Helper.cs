@@ -3,7 +3,7 @@ using NogosServisi.Entities;
 public static class ScoreHelper
 {
     public static Game UpdateScore(Game game, Events newEvent){
-        if (game.awayPlayers.Contains(newEvent.Player_One))
+        if (game.awayPlayers.Any(p => p.Id == newEvent.Player_OneId))
         {
             game.Club_Away_Score++;
         }
