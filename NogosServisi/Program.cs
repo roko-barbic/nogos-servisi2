@@ -25,7 +25,7 @@ app.UseRouting();
 
 app.UseCors("SignalRCors");
 //Default database seeding
-/*
+
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -35,7 +35,7 @@ using (var scope = app.Services.CreateScope())
     await DefaultSeeds.SeedAsync(context);
 
     await context.DisposeAsync();
-}*/
+}
 
 //messaging
 
